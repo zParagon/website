@@ -1,0 +1,12 @@
+<class="parallax" data-image-src="imgs/wallpaper4.jpg">
+
+.parallax {
+width: 100vw;
+height: 100vh;
+background: transparent;
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
