@@ -1,4 +1,22 @@
-<class="parallax" data-image-src="imgs/wallpaper4.jpg">
+* {
+margin:0;
+padding:0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #e6f4ff;
+}
+
+.top-container {
+text-align: center;
+}
 
 .parallax {
 width: 100vw;
@@ -9,4 +27,428 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 position: relative;
+}
+
+#header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  background: #3a3a3a;
+  font-size: 7pt;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px #000;
+  z-index: 2;
+}
+
+.mast-text {
+position: relative;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 1;
+}
+
+.blue-center-text-box {
+  position: relative;
+  min-width: 10px;
+  max-width: 700px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.white-center-text-box {
+  position: relative;
+  min-width: 10px;
+  max-width: 700px;
+  height: 15%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.text-box {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bottom-text-box {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.video-box {
+  width: 100%;
+  height: 100%;
+}
+
+.white-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: calc(400px-50vh);
+  width: 100%;
+  background-color: #e6f4ff;
+}
+
+.blue-container {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 5vh; /* remove if cv buttom is addd */
+  height: calc(400px-50vh);
+  width: 100%;
+  background-color: #73badd;
+  box-shadow: 0px 0px 10px 0px #000;
+}
+
+.gray-container {
+  position: relative;
+  background: #3a3a3a;
+  min-height: 50px;
+  max-height: 500px;
+  width: 100%;
+}
+
+.item-container {
+  position: relative;
+  height: calc(400px-50vh);
+  width: 100%;
+  background-color: #73badd;
+  box-shadow: 0px 0px 10px 0px #000;
+  padding-bottom: 50px;
+}
+
+.canvas {
+  position: relative;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.item-holder {
+  position: relative;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.item {
+  height: 270px;
+  width: 200px;
+  background-color: #ffffff;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0px 0px 10px 0px #000;
+  transition: 0.3s ease-in-out;
+}
+
+.image {
+  position: relative;
+  height: 75%;
+  width: 100%;
+  overflow:hidden;
+  float: top;
+}
+
+.item-image {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-position: left, top;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.description {
+  position: relative;
+  float:bottom;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+}
+
+a:link{ /* removes underline from the description text */
+  text-decoration: none;
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
+
+.bottom-icons {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.icon {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.wrapper {
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+
+.wrapper div {
+  min-height: 200px;
+}
+
+@media screen and (max-width: 1000px) { /* when screen is small*/
+
+  .two {
+    overflow:hidden;
+    width: 100%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    order: 1;
+  }
+
+  .one { /* "one", "two", "three", "four": from top to bottom in order */
+    float: none;
+    width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    border:0;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 50px;
+    order: 2;
+  }
+
+  .three {
+    overflow:hidden;
+    width: 100%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    order: 1;
+  }
+
+  .four {
+    float: none;
+    width: 100vw;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    border:0;
+    padding-left: 2%;
+    padding-right: 2%;
+    order: 2;
+    padding-top: 50px;
+  }
+
+  .wrapper { /* container for "one"&"two" and "three"&"four" */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+  }
+
+  .video-box {
+    width: 96%;
+    height: auto;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  .item {
+    height: 270px;
+    width: 200px;
+    background-color: #ffffff;
+    border-radius: 15px 15px 15px 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .right {
+   text-align: center;
+  }
+}
+
+@media screen and (min-width: 1000px) { /* when screen is big */
+  .one { /* top left text */
+    overflow: hidden;
+    float: left;
+    min-width: 200px;
+    max-width: 600px;
+    height: 50%;
+    margin-left: auto;
+    padding-right: 50px;
+  }
+
+  .two { /* top right video */
+    overflow:hidden;
+    width: 600px;
+    height: 50%;
+    margin-right: auto;
+    padding-left: 50px;
+  }
+
+  .three { /* bottom left video */
+    overflow:hidden;
+    float: left;
+    width: 600px;
+    height: 50%;
+    margin-left: auto;
+    padding-right: 50px;
+  }
+
+  .four { /* bottom right text */
+    overflow: hidden;
+    min-width: 200px;
+    max-width: 600px;
+    height: 50%;
+    margin-right: auto;
+    padding-left: 50px;
+  }
+
+  .wrapper {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .canvas {
+    position: relative;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 200px;
+    padding-right: 200px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .right {
+   text-align: center;
+  }
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+border-radius: 5px;
+padding: 15px 25px;
+font-size: 22px;
+text-decoration: none;
+margin: 20px;
+color: #fff;
+position: relative;
+display: inline-block;
+background-color: #55acee;
+box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+.btn:active {
+transform: translate(0px, 5px);
+-webkit-transform: translate(0px, 5px);
+box-shadow: 0px 1px 0px 0px #3C93D5;
+}
+
+.btn-holder {
+text-align: center;
+padding-bottom: 20px;
+}
+
+.icon-color {
+  color: white;
+}
+
+.home {
+  font-size: 30px;
+  font-family: "Arial";
+  text-decoration: none;
+  margin: 5px;
+  color: #73badd;
+  position: relative;
+  display: inline-block;
+}
+
+.parallax h1 {
+font-family: "Arial black";
+font-size: 50px;
+color: #ffffff;
+}
+
+.white-center-text-box h1 {
+  font-family: "Arial black";
+  padding-bottom: 20px;
+  font-size: 50px;
+  color: #000000;
+}
+
+.blue-center-text-box h1 {
+font-family: "Arial black";
+padding-bottom: 20px;
+font-size: 50px;
+color: #ffffff;
+}
+
+.parallax p1 {
+font-family: "Arial black";
+font-size: 30px;
+line-height: 3;
+color: #ffffff;
+}
+
+.blue-center-text-box p1 {
+font-family: "Arial";
+font-size: 20px;
+color: #ffffff;
+}
+
+.text-box p1 {
+  font-family: "Arial";
+  font-size: 18px;
+  color: #000000;
+}
+
+.bottom-text-box p1 {
+  font-family: "Arial";
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.description p1 {
+  font-family: "Arial";
+  font-size: 20px;
+  color: #000000;
 }
